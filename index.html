@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        const root = document.getElementById("root");
+        const h1 = document.createElement("h1");
+        console.log(h1.style);
+        Object.assign(h1.style,{
+            color: 'blue',
+            backgroundColor: 'green'
+        })
+        console.log(h1.style);
+        var a = 1;
+        h1.innerText = "Hello, world!";
+        console.log(typeof h1); //object
+        root.appendChild(h1);
+
+        function loglog(){
+            var myString ='';
+            for (var para of arguments) {
+                myString += para;
+            }
+            console.log(
+                myString.substr(0, myString.length -1)
+            )
+        }
+        loglog('he','he',1);
+        
+        var k = function cong(){    //k is declared funtion 
+            var sum = 0;
+            for (var para of arguments) {
+                sum += para;
+            }
+            console.log(
+                sum
+            )
+        }
+        k (2,3,4); //luu y chi co k duoc dinh nghia, con cong() thi khong duoc dinh nghia
+
+        var forr = 'javascript';
+        var for2 = {
+            name : 'hello world',
+            age: 8
+        }
+        console.log(
+            for2.age
+        );
+        for (var value of Object.values(for2)){
+            console.log(value);
+        }
+
+        //map
+
+        var courses = [
+            {
+                id: 1,
+                name: 'Javascript',
+                coin: 0
+            },
+            {
+                id: 2,
+                name: 'Javascript',
+                coin: 0
+            },
+            {
+                id: 3,
+                name: 'Javascript',
+                coin: 0
+            }
+        ];
+        function lap(course, index, originArray) {
+            //console.log(course);
+            return {
+                khoaHoc: course.name + ' gia',
+                id: course.id,
+                originArray: originArray,
+            }
+        }
+        var kqMap = courses.map(lap);
+        console.log(kqMap);
+        console.log(kqMap.length);
+    </script>
+</body>
+</html>
