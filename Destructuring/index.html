@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document1</title>
+</head>
+<body>
+    <h1>hello</h1>
+    <script>
+        let arr1 = [1, 2, 3, 4]
+        let state ={
+            name: "Hoa",
+            address: "Soc Trang",
+            age: "18"
+        }
+        //let name = state.name
+        //let address = state.address
+        //let age = state.age
+        //console.log(name, address, age)
+        let {name1, address1, age1} = state;
+        console.log(name1, address1, age1) // không trả ra gì vì không trùng tên với các thuộc tính của object
+        let {name, address, age} = state;
+        console.log(name, address, age)
+
+        let arr = ['To Hoa','18','hello']
+        let [namee,...rest]=arr;
+        console.log(...rest)
+    </script>
+</body>
+</html>

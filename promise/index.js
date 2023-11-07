@@ -16,6 +16,10 @@ setTimeout(function () {
     }, 1000)
 }, 1000)
 //3 Viết Promise
+//Để xử lý bất đồng bộ => callback -> callback hell
+//promise được sinh ra từ phiên bản mới hơn ES6 -> khắc phục callback hell
+//Tạo ra promise, dùng new Promise, trong constructer truyền vào executor function, khi executor thực thi => nhận được 2 tham số là resolve và  reject, thành công => gọi resolve(). thái bại => gọi reject().
+//Khi sử dụng promises thì đối tượng promise được tạo ra. có 2 attributes của đối tượng này là .then và .catch. Cả 2 đều nhận đối số là 1 callback function, và .then sẽ thực thi khi vào trường hợp resolve và ngược lại
 function getTodos(id) {
 
     var promise = new Promise(
