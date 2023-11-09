@@ -26,6 +26,27 @@
         let arr = ['To Hoa','18','hello']
         let [namee,...rest]=arr;
         console.log(...rest)
+
+        //
+        var course = {
+            nameee: 'Javascript',
+            price: 1000,
+            image: 'http://localhost',
+            children: {
+                name1: 'react'
+            }
+        };
+
+        var {nameee: parentName, children: {name1: childrenName}, description ='default'} = course; // có thể đổi tên chứ không nhất thiết phải đặt tên trùng với tên thuộc tính
+        console.log(parentName, childrenName, description);
+
+        //Toán tử ...rest
+        logger = (...params) => {
+            console.log(...params); // truyền params vào thì là mảng
+            console.log(arguments);
+        }
+
+        logger(1,2,3,4,5,6,7,8,9,10,11,12);
     </script>
 </body>
 </html>
