@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document1</title>
+</head>
+<body>
+    <h1>hello</h1>
+    <script>
+        highlight = ([first,...strings], ...para) => {
+            //console.log(...rest) //cho ra 4 para, bao gồm 1 mảng 4 và 3 para ở phía sau
+            return para.reduce(
+                (acc,curr) =>{
+                    return [...acc, `<span>${curr}</span>`, strings.shift() ]
+                }, [first]
+            );
+
+        }
+        const name = 'Tô Hòa'
+        const action = 'học lập trình'
+        const course = 'javascript'
+        const html = highlight`${name} đang ${action} ${course}`
+        console.log(html.join(''))
+        console.log(html)
+    </script>
+</body>
+</html>
